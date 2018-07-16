@@ -1,0 +1,22 @@
+packages:
+  # Currently unused block, hopefully supported in the future
+  - pkg:/developer/gcc51
+  - omniti/runtime/erlang@19.0.0
+  - pkg:/archiver/gnu-tar
+  - pkg:/system/header
+
+environment:
+    CXX: /usr/bin/g++
+
+stages:
+  - name: build
+    steps:
+      - env
+      - pwd
+      - make package
+      - make ips-package
+
+  - name: publish
+    match: "^master$"
+    steps:
+      - make publish
