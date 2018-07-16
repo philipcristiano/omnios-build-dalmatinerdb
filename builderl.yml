@@ -13,6 +13,8 @@ stages:
     steps:
       - env
       - pwd
+      - make clone
+      - make build
       - make package
       - make ips-package
 
