@@ -1,4 +1,4 @@
-VERSION=0.3.4
+VERSION=0.3.3
 REPO=https://github.com/dalmatinerdb/dalmatinerdb.git
 TARGET_DIRECTORY=/opt/dalmatinerdb
 
@@ -12,6 +12,8 @@ build:
 	cd src; ./rebar3 release || true
 
 package:
+	mkdir -p ips-build
+
 
 ips-package:
 
