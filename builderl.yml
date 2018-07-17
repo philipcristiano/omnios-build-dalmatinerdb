@@ -6,7 +6,7 @@ packages:
   - pkg:/system/header
 
 environment:
-    CXX: /usr/bin/g++ -m64
+    CXX: /usr/bin/g++
     CC: /usr/bin/gcc -m64
     DEBUG: '1'
 
@@ -18,7 +18,6 @@ stages:
       - make clone
       - make build
       - make package
-      - make ips-package
 
   - name: publish
     match: "^master$"
