@@ -19,6 +19,7 @@ stages:
       - make build
       - make package
 
+
   - name: publish
     match: "^master$"
     steps:
