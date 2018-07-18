@@ -18,6 +18,7 @@ stages:
       - make clone
       - make build
       - make package
+      - make ips-package
 
 
   - name: publish
