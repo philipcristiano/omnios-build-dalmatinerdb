@@ -1,6 +1,8 @@
+PROJECT=dalmatinerdb
 VERSION=0.3.3
 REPO=https://github.com/dalmatinerdb/dalmatinerdb.git
 TARGET_DIRECTORY=/opt/dalmatinerdb
+RELEASE_DIR=src/_build/default
 
 export TARGET_DIRECTORY
 
