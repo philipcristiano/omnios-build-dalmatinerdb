@@ -9,7 +9,7 @@ clone:
 	cd src; git status
 
 build:
-	cd src; ./rebar3 release || true
+	cd src; ./rebar3 release
 
 package:
 	mkdir -p ips-build
