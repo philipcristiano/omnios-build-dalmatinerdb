@@ -1,5 +1,5 @@
 PROJECT=dalmatinerdb
-VERSION=0.3.3
+VERSION=0.3.4
 PROJECT_VERSION=${VERSION}
 REPO=https://github.com/dalmatinerdb/dalmatinerdb.git
 TARGET_DIRECTORY=/opt/dalmatinerdb
@@ -19,6 +19,7 @@ package:
 	mkdir -p ${IPS_BUILD_DIR}/opt/ ${IPS_TMP_DIR} "${IPS_BUILD_DIR}/etc"
 	mkdir -p ${IPS_BUILD_DIR}/data/dalmatinerdb/etc
 	mv ${RELEASE_DIR}/ddb/etc/ddb.conf ${IPS_BUILD_DIR}/data/dalmatinerdb/etc/ddb.conf
+
 	cp -R ${RELEASE_DIR} ${IPS_BUILD_DIR}/opt/${PROJECT}
 	rm -rf ${IPS_BUILD_DIR}/opt/${PROJECT}/${PROJECT}_release-*.tar.gz
 	cp LICENSE.pkg ${IPS_BUILD_DIR}/
