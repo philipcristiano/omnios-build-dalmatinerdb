@@ -22,6 +22,6 @@ stages:
 
 
   - name: publish
-    match: "^master$"
+    match: "^build$"
     steps:
       - make publish
