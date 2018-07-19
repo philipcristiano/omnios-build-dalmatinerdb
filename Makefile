@@ -12,6 +12,7 @@ clone:
 	cd src; git status
 
 build:
+
 	cd src; ./rebar3 release -d false # -d false: disable dev mode
 
 package:
@@ -20,6 +21,8 @@ package:
 	mkdir -p ${IPS_BUILD_DIR}/data/dalmatinerdb/etc
 	mv ${RELEASE_DIR}/ddb/etc/ddb.conf ${IPS_BUILD_DIR}/data/dalmatinerdb/etc/ddb.conf
 
+  # Remove git files/dirs
+	( find ${RELEASE_DIR} -type d -name ".git" && find ${RELEASE_DIR} -name ".gitignore" && find ${RELEASE_DIR} -name ".gitmodules" ) | xargs -d '\n' rm -rf
 	cp -R ${RELEASE_DIR} ${IPS_BUILD_DIR}/opt/${PROJECT}
 	rm -rf ${IPS_BUILD_DIR}/opt/${PROJECT}/${PROJECT}_release-*.tar.gz
 	cp LICENSE.pkg ${IPS_BUILD_DIR}/
