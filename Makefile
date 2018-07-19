@@ -12,7 +12,7 @@ clone:
 	cd src; git status
 
 build:
-	cd src; ./rebar3 release
+	cd src; ./rebar3 release -d false # -d false: disable dev mode
 
 package:
 	@echo do packagey things!
