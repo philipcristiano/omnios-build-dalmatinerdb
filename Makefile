@@ -16,6 +16,12 @@ build:
 
 package:
 	@echo do packagey things!
+	mkdir -p ${IPS_BUILD_DIR}/opt/ ${IPS_TMP_DIR} "${IPS_BUILD_DIR}/etc"
+	mkdir -p ${IPS_BUILD_DIR}/data/dalmatinerdb/etc
+	mv ${RELEASE_DIR}/ddb/etc/ddb.conf ${IPS_BUILD_DIR}/data/dalmatinerdb/etc/ddb.conf
+	cp -R ${RELEASE_DIR} ${IPS_BUILD_DIR}/opt/${PROJECT}
+	rm -rf ${IPS_BUILD_DIR}/opt/${PROJECT}/${PROJECT}_release-*.tar.gz
+	cp LICENSE.pkg ${IPS_BUILD_DIR}/
 
 publish: ips-package
 ifndef PKGSRVR
