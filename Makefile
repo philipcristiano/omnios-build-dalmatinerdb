@@ -1,7 +1,7 @@
 PROJECT=dalmatinerdb
 VERSION=0.3.4
 PROJECT_VERSION=${VERSION}
-REPO=https://github.com/dalmatinerdb/dalmatinerdb.git
+REPO=https://gitlab.com/Project-FiFo/DalmatinerDB/dalmatinerdb.git
 TARGET_DIRECTORY=/opt/dalmatinerdb
 RELEASE_DIR=src/_build/default/rel
 
