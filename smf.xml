@@ -21,6 +21,7 @@
             <method_credential user='dalmatinerdb' group='dalmatinerdb' privileges='basic,PRIV_NET_PRIVADDR'/>
             <method_environment>
                 <envvar name="HOME" value="/opt/dalmatinerdb/"/>
+                <envvar name="PATH" value="/usr/sbin:/sbin:/usr/bin"/>
             </method_environment>
         </method_context>
 
