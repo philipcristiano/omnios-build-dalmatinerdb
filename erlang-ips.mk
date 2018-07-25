@@ -15,6 +15,7 @@ set name=pkg.fmri value=${IPS_FMRI}
 set name=pkg.description value="${IPS_DESCRIPTION}"
 set name=pkg.summary value="${IPS_SUMMARAY}"
 set name=variant.arch value=${ARCH}
+depend fmri=pkg:/omniti/runtime/erlang@19 type=require
 depend fmri=pkg:/server/dalmatiner-common type=require
 group groupname=${PROJECT}
 user username=${PROJECT} group=${PROJECT} home-dir=/opt/${PROJECT}

@@ -17,6 +17,10 @@
             <service_fmri value="svc:/system/filesystem/local"/>
         </dependency>
 
+        <dependency name="epmd" grouping="require_all" restart_on="error" type="service">
+            <service_fmri value="svc:/network/epmd:default"/>
+        </dependency>
+
         <method_context>
             <method_credential user='dalmatinerdb' group='dalmatinerdb' privileges='basic,PRIV_NET_PRIVADDR'/>
             <method_environment>
